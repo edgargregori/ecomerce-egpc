@@ -1,5 +1,8 @@
 <?php
 
+use App\Models\ProductCategory\ProductCategory;
+use App\Models\Product\Product;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,5 +15,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('app');
+    return Product::get();
+    return ProductCategory::get();
+});
+
+Route::resource('/product', 'ProductController');
+Route::get('/prod', 'ProductController@getProduct');
+
+Route::get('welcome', function () {
+    return "hi";
+        
+    return Product::get();
 });
