@@ -23,8 +23,11 @@ Route::get('/', function () {
 Route::resource('/product', 'ProductController');
 Route::get('/prod', 'ProductController@getProduct');
 
-Route::get('welcome', function () {
-    return "hi";
-        
-    return Product::get();
+Route::get('/product_category', function () {
+    return Product::with(['product_category'])->get();
+    return Product::find(2)->product_category; //Product from ProductCategory 2.
+    return ProductCategory::has("products")->get();//category without Products.
+    return Product::has("product_category")->get();
+    return ProductCategory::find(2)->products; //Product from ProductCategory 2.
+    return ProductCategory::get();
 });

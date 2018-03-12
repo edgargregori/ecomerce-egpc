@@ -13,4 +13,10 @@ yarn-error.log
 .env
 code_backup.txt
 cmds.txt
-
+/adapter
+/brg
+/fcd
+/src
+/dct
+/bridge
+/decorator

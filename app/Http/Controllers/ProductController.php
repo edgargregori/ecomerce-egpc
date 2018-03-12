@@ -9,7 +9,8 @@ class ProductController extends Controller
 {
     public function getProduct(Product $product)
     {
-        $model = $product->get();//->toArray()
+        //$model = $product->get();//->toArray()
+        $model =  Product::with(['product_category'])->get();
         return view('app', ['model' => $model]);
     }
     /**

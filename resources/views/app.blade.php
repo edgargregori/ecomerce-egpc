@@ -30,6 +30,7 @@
             <ul>
                 <li v-for="n in model">
                     categoria: @{{ n.product_category_id }}
+                    categoria_nombre: @{{ n.product_category.category_name }}
                     nombre: @{{n.product_name}}
                     units: @{{n.units_in_stock}}
                 </li>
