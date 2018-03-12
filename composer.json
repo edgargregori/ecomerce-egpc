@@ -25,7 +25,7 @@
         ],
         "psr-4": {
             "App\\": "app/",
-            "": "adp/"
+            "": "bridge/"
         }
     },
     "autoload-dev": {
